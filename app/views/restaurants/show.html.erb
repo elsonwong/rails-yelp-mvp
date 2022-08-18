@@ -1,0 +1,10 @@
+<h1>this is a show html</h1>
+
+<%# display %>
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+   <li><%= review.content %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Create new review", new_restaurant_review_path(@restaurant) %>
